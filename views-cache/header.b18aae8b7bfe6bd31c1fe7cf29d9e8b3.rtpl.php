@@ -1,4 +1,4 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><!DOCTYPE html>
+<?php if(!class_exists('Rain\Tpl')){exit;}?>    <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
@@ -209,7 +209,7 @@ desired effect
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="/admin/logout" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
