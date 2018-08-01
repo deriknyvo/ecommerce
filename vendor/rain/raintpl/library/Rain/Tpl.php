@@ -69,7 +69,7 @@ class Tpl {
         ),
     );
     protected $templateInfo = array();
-    
+
     /**
      * Draw the template
      */
@@ -79,7 +79,7 @@ class Tpl {
         require $this->checkTemplate($templateFilePath);
         $html = ob_get_clean();
         if ($toString)
-            return $html; 
+            return $html;
         else
             echo $html;
     }
@@ -93,7 +93,7 @@ class Tpl {
         require $this->checkString($string);
         $html = ob_get_clean();
         if ($toString)
-            return $html; 
+            return $html;
         else
             echo $html;
     }
@@ -233,7 +233,7 @@ class Tpl {
             // save the filepath in the info
             $this->templateInfo['template_filepath'] = $templateFilepath;
 
-            // read the file			
+            // read the file
             $this->templateInfo['code'] = $code = fread($fp, filesize($templateFilepath));
 
             // xml substitution
@@ -398,7 +398,7 @@ class Tpl {
 
                     // reduce the path
                     $includeTemplate = preg_replace('/\w+\/\.\.\//', '', $includeTemplate);
-                    
+
                     //dynamic include
                     $parsedCode .= '<?php require $this->checkTemplate("' . $includeTemplate . '");?>';
 
@@ -541,7 +541,7 @@ class Tpl {
                     // check black list
                     $this->blackList($parsedFunction);
 
-                    // function 
+                    // function
                     $parsedCode .= "<?php echo $parsedFunction; ?>";
                 }
 
@@ -558,8 +558,8 @@ class Tpl {
                 }
                 // registered tags
                 else {
-                    
-                    $found = FALSE;                   
+
+                    $found = FALSE;
                     foreach (static::$conf['registered_tags'] as $tags => $array) {
                         if (preg_match_all('/' . $array['parse'] . '/', $html, $matches)) {
                             $found = true;
