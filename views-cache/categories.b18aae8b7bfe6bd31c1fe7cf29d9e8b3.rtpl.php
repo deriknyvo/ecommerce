@@ -17,7 +17,7 @@
   <div class="row">
   	<div class="col-md-12">
   		<div class="box box-primary">
-            
+
             <div class="box-header">
               <a href="/admin/categories/create" class="btn btn-success">Cadastrar Categoria</a>
             </div>
@@ -28,7 +28,7 @@
                   <tr>
                     <th style="width: 10px">#</th>
                     <th>Nome da Categoria</th>
-                    <th style="width: 140px">&nbsp;</th>
+                    <th style="width: 240px">&nbsp;</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -38,7 +38,8 @@
                     <td><?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                     <td><?php echo htmlspecialchars( $value1["descategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                     <td>
-                      <a href="/admin/categories/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                      <a href="/admin/categories/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/products" class="btn btn-default btn-xs"><i class="fa fa-edit"></i>Produtos</a>
+                      <a href="/admin/categories/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Editar</a>
                       <a href="/admin/categories/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
                     </td>
                   </tr>
